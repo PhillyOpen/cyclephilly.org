@@ -1,7 +1,7 @@
 // create the map content
 var map = L.map('mapBody', {
-    center: [33.77, -84.372], 
-    zoom: 14
+    center: [39.9452735, -75.1485887], 
+    zoom: 13
 });
 
 // add an OpenStreetMap tile layer

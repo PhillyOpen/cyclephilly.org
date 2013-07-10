@@ -5,8 +5,8 @@
 */
 class Util
 {
-	const DEV_HOSTNAME  = '';
-	const PROD_HOSTNAME = '';
+	const DEV_HOSTNAME  = 'mytracks.phillyopen.org';
+	const PROD_HOSTNAME = 'mytracks.phillyopen.org';
 
 	protected static $hostname = null;
 
