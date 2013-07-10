@@ -37,7 +37,7 @@
 
         <div class="navbar-fixed-top">
             <div class="container">
-                <p class="cycleAtl_title"><a href="http://cycleatlanta.org">Cycle Atlanta <span class="smallText">Mapping the ride to a better Atlanta.</span></a></p>
+                <p class="cycleAtl_title"><a href="http://mytracks.phillyopen.org">My Tracks Philly <span class="smallText">Mapping the ride to a better Philly.</span></a></p>
             </div>
         </div>
 
