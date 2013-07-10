@@ -42,7 +42,7 @@
         </div>
 
         <div class="container"> 
-        	<div id="top"><p>Visualizing <span class="trip_count"></span> rides collected by users of the <a href="http://cycleatlanta.org">Cycle Atlanta apps</a>. <span class="right">Select attributes you wish to view and click "Update the map!" below.</span></p></div>
+        	<div id="top"><p>Visualizing <span class="trip_count"></span> rides collected by users of the <a href="http://cyclephilly.org">Cycle Philly apps</a>. (Currently just Lloyd and Corey :-P) <span class="right">Select attributes you wish to view and click "Update the map!" below.</span></p></div>
             <div id="mapBody"></div>
             <div id="controlContainer">
 	            <div id="status"><span id="statusMsg">Updating map...</span><br/><img src="img/loader.gif" alt="loader" width="220" height="19"></div>
