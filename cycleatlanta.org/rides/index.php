@@ -6,13 +6,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Cycle Atlanta: Interactive map</title>
+        <title>Cycle Philly: Interactive map</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="http://cycleatlanta.org/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap.min.css">
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
-        <link rel="stylesheet" href="http://cycleatlanta.org/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" type="text/css" media="all" />
         <link rel="stylesheet" href="css/main.css">
 
@@ -27,7 +27,7 @@
 
         <div class="navbar-fixed-top">
             <div class="container">
-                <p class="cycleAtl_title"><a href="http://mytracks.phillyopen.org">My Tracks Philly <span class="smallText">Mapping the ride to a better Philly.</span></a></p>
+                <p class="cycleAtl_title"><a href="http://mytracks.phillyopen.org">Cycle Philly <span class="smallText">Ride Philly to Route It.</span></a></p>
             </div>
         </div>
 
@@ -35,7 +35,7 @@
         	<div id="top"><p>Visualizing <span class="trip_count"></span> rides collected by users of the <a href="http://cyclephilly.org">Cycle Philly apps</a>. (Currently just Lloyd and Corey :-P) <span class="right">Select attributes you wish to view and click "Update the map!" below.</span></p></div>
             <div id="mapBody"></div>
             <div id="controlContainer">
-	            <div id="status"><span id="statusMsg">Updating map...</span><br/><img src="img/loader.gif" alt="loader" width="220" height="19"></div>
+	            <div id="status"><span id="statusMsg">Updating map/span><br/><img src="img/loader.gif" alt="loader" width="220" height="19"></div>
 	            <div id="controls"><div id="slider"></div></div>
 	            <div id="form">
 					<form id="ca_data_selector" action="#">
