@@ -44,7 +44,7 @@
 						</div>						
 						<ul >
 							<li id="rider_type" >
-								<label class="description" for="trip_purpose">Ride Purpose</label>
+								<label class="description" for="trip_purpose">Purpose</label>
 								<span>
 									<input id="trip_purpose_1" name="trip_purpose_1" class="element checkbox trip_purpose" type="checkbox" value="Commute" checked/>
 									<label class="choice" id="label_trip_purpose_1" for="rider_type_1">Commute</label>
