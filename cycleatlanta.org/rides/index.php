@@ -143,7 +143,7 @@
 					</form>	
 				</div>
             </div>
-            <p class="bottom">This website brought to you by researchers from the <a href="http://participatorypublicslab.net"> Participatory Publics Lab</a> at <a href="http://gatech.edu">Georgia Tech</a>.</p>
+            <p class="bottom">Adaptation of Cycle Atlanta <a href="http://cycleatlanta.org/rides/" target="blank">website</a> created by researchers from the <a href="http://participatorypublicslab.net"> Participatory Publics Lab</a> at <a href="http://gatech.edu">Georgia Tech</a>.</p>
             <div id="debug"></div>
 		</div> <!-- /container -->
 
