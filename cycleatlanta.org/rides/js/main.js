@@ -14,7 +14,7 @@ var mapTileLayer = new L.TileLayer(stamenUrl, {maxZoom: 18, attribution: stamenA
 map.addLayer(mapTileLayer);
 var tripsLayer = new L.LayerGroup().addTo(map);
 
-$(".leaflet-control-zoom").css("background-color","rgba(13,85,135,0.7)"); //orange:rgba(227,76,37,0.5)
+$(".leaflet-control-zoom").css("background-color","rgba(0,0,0,0.7)"); //changed zoom control to black
 var tilesVisible = true;
 
 var loadedTrips = new Array();
