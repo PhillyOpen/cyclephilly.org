@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
         <link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="css/scratch.css">
+        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="chosen/chosen.css">
         
         
