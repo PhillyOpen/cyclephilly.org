@@ -1,16 +1,9 @@
-html, body {
+html, body, #map{
 	
 height:100%;
 font-family: Arial, Helvetica, sans-serif;
 z-index: 1;
 }
-
-#map{
-
-height: 400px;
-
-}
-
 
 .cyclePHL_title {
 	margin: 1% 1%;

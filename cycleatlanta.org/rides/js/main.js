@@ -1,5 +1,5 @@
 // create the map content
-var map = L.map('mapBody', {
+var map = L.map('map', {
     center: [39.9452735, -75.1485887], 
     zoom: 13
 });
