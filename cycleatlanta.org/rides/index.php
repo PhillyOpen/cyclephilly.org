@@ -133,7 +133,7 @@
  <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
 
         <script src="js/main.js"></script>
-        <script src="/chosen/chosen.jquery.min.js" type="text/javascript"></script>
+        <script src="chosen/chosen.jquery.min.js" type="text/javascript"></script>
 
 		
 		
