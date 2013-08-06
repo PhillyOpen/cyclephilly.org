@@ -1,8 +1,14 @@
-html, body, #map {
+html, body {
 	
 height:100%;
 font-family: Arial, Helvetica, sans-serif;
 z-index: 1;
+}
+
+#map{
+
+height: 400px;
+
 }
 
 
