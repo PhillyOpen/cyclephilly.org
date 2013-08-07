@@ -13,8 +13,9 @@ var stamenAttribution = 'Map tiles by <a href="http://stamen.com">Stamen Design<
 var mapTileLayer = new L.TileLayer(stamenUrl, {maxZoom: 18, attribution: stamenAttribution});
 map.addLayer(mapTileLayer);
 var tripsLayer = new L.LayerGroup().addTo(map);
-
 $(".leaflet-control-zoom").css("background-color","rgba(0,0,0,0.7)"); //changed zoom control to black
+$(".leaflet-control-zoom").css("position","fixed"); //changed position to fixed
+$(".leaflet-control-zoom").css("margin","15% 96%"); //changed postition to right
 var tilesVisible = true;
 
 var loadedTrips = new Array();
