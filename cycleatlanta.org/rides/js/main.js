@@ -22,9 +22,6 @@ var loadedTrips = new Array();
 var visibleTrips = new Array();
 
 var riderType = "";
-var gender = ""
-var ethnicity = "";
-var age = "";
 var purpose = new Array();
 
 var r_depth = 0; //keep track of recursion depth for status updates
@@ -40,9 +37,6 @@ function tileOpacity (alpha){
 
 $('#ca_data_selector').submit(function() {
 	riderType = "";
-	gender = ""
-	ethnicity = "";
-	age = "";
 	purpose = new Array();
 	
 	var demoQuery = "";
@@ -60,9 +54,6 @@ $('#ca_data_selector').submit(function() {
    
     //more restricted searchers as only pulls data with something in each category
 	if(0 === $('input:checkbox.rider_type:checked').size() ||
-	   0 === $('input:checkbox.gender:checked').size() ||
-	   0 === $('input:checkbox.ethnicity:checked').size() ||
-	   0 === $('input:checkbox.age:checked').size() ||
 	   0 === $('input:checkbox.trip_purpose:checked').size()){
 		alert('You must select at least one item from each category.');
 		return false;
@@ -75,26 +66,6 @@ $('#ca_data_selector').submit(function() {
 		}
 	});
 	
-	$('input:checkbox.gender').each(function () {
-		if(this.checked){
-			if(gender!="") gender+=", ";
-			gender += $(this).val();
-		}
-	});
-	
-	$('input:checkbox.ethnicity').each(function () {
-		if(this.checked){
-			if(ethnicity!="") ethnicity+=", ";
-			ethnicity += $(this).val();
-		}
-	});
-	
-	$('input:checkbox.age').each(function () {
-		if(this.checked){
-			if(age!="") age+=", ";
-			age += $(this).val();
-		}
-	});
 	
 	$('input:checkbox.trip_purpose').each(function () {
 		if(this.checked){
@@ -104,18 +75,7 @@ $('#ca_data_selector').submit(function() {
 	
 	//generate the demoQuery string
 	if(riderType!="") demoQuery = "WHERE rider_type IN ("+riderType+") ";
-	if(gender!=""){
-		if(demoQuery != "") demoQuery += "AND gender IN ("+gender+") ";
-		else demoQuery += "WHERE gender IN ("+gender+") ";
-	}
-	if(ethnicity!=""){
-		if(demoQuery != "") demoQuery += "AND ethnicity IN ("+ethnicity+") ";
-		else demoQuery += "WHERE ethnicity IN ("+ethnicity+") ";
-	}
-	if(age!=""){ 
-		if(demoQuery != "")demoQuery += "AND age IN ("+age+") ";
-		else demoQuery += "WHERE age IN ("+age+") ";
-	}
+	
 	//generate the purposeQuery
 	for(i=0; i < purpose.length; i++){
 		if(purposeQuery != "")	purposeQuery += ", ";
@@ -284,13 +244,7 @@ function updatePolylines(lineOpacity){
 
 //returns the color to use based on current color-coding selection
 function setPolylineColor (currentTrip){
-	if(showColors=="gender"){
-		return colorArray[currentTrip.trip.gender];
-	}else if (showColors=="ethnicity"){
-		return colorArray[currentTrip.trip.ethnicity];
-	}else if (showColors=="age"){
-		return colorArray[currentTrip.trip.age-1]; //offset w/ array bcs we ignore <18 yrs old
-	}else if (showColors=="rider_type"){
+	if(showColors=="rider_type"){
 		return colorArray[currentTrip.trip.rider_type];
 	}else if(showColors=="purpose"){
 		if(currentTrip.trip.purpose=="Commute") return colorArray[1];
