@@ -63,40 +63,6 @@
         
         </optgroup>
     
-    <optgroup label="Gender:">
-        
-        <option>Female</option>
-        <option>Male</option>
-        
-        
-        </optgroup>
-
-
-    <optgroup label="Age:">
-        
-        <option>18-24</option>
-        <option>25-34</option>
-        <option>35-44</option>
-        <option>45-54</option>
-        <option>55-64</option>
-        <option>65+</option>
-        
-        
-        </optgroup>
-    
-    <optgroup label="Ethnicity">
-        
-        <option>White</option>
-        <option>African American</option>
-        <option>Asian</option>
-        <option>Native American</option>
-        <option>Pacific Islander</option>
-        <option>Multi-racial</option>
-        <option>Hispanic</option>
-        <option>Other</option>
-        
-        
-        </optgroup>
     
     
 </select> 

@@ -53,12 +53,14 @@ $('#ca_data_selector').submit(function() {
 */
    
     //more restricted searchers as only pulls data with something in each category
+
 	if(0 === $('input:checkbox.rider_type:checked').size() ||
 	   0 === $('input:checkbox.trip_purpose:checked').size()){
-		alert('You must select at least one item from each category.');
+		alert('You must select both items from each category.');
 		return false;
     }
-	
+	// Changed alert message from 'at least' to to 'both' as we now have only two categories
+
 	$('input:checkbox.rider_type').each(function () {
 		if(this.checked){
 			if(riderType!="") riderType+=", ";
