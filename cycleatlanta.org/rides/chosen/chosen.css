@@ -3,14 +3,14 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  font-size: 13px;
+  font-size: 1em; 
   zoom: 1;
   *display: inline;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  margin-left: 1%;
-  float:left;
+ /* margin-left: 1%;
+  float:left; */
 }
 .chosen-container .chosen-drop {
   position: absolute;

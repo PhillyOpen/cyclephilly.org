@@ -27,24 +27,19 @@
         <![endif]-->
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-<div class="section group">
-    <div class="col span_5_of_5">
-    <div class="cyclePHL_title">
+
+
+        <div class="cyclePHL_title">
         
        <div id="cycleTitleText">Cycle Philly</div>
-   </div>
-    </div>
-   </div>
-  <div class="section group">
-  
-    <div class="col span_5_of_5 chosenBox">
-    <div>
-        <p id="filterText">Filter Rides:</p>
+        
+        <div class="chosenBox">
+        <p>Filter Rides:</p>
         
 <form id="ca_data_selector" action="#">
     
     <select id="ca_data_selector_field" class="chosen" multiple="true">
-        <optgroup label="Ride Purpose:">
+		<optgroup label="Ride Purpose:">
         
         <option value="PCommute">Commute</option>
         <option value="PSchool">School</option>
@@ -57,7 +52,7 @@
         
         
         </optgroup>
-    
+	
     <optgroup label="Rider Type:">
         
         <option value="TStrong & Fearless">Strong & Fearless</option>
@@ -74,42 +69,25 @@
 </select> 
 
 
-<div style=" clear: both; float: right;">
-    <ul style="list-style-type: none;"><li>                          
-                                <input type="submit" value="Update" />
-                            </li>
-                        </ul></div>
+<div style=" clear: both; float: right; margin: -25px 0px 0px -40px;"><ul><li>							
+								<input type="submit" value="Update" />
+							</li>
+						</ul></div>
 
 
 </form>
 
 </div>
 
-    </div>
-    
-</div>
-
-</div>
-
-<!-- <div class="section group"> -->
-   <!--  <div class="col span_5_of_5">-->
-   <div id="map"></div>
-    <!-- </div> -->
-    
-</div>
-
         
         
         
-        
-        
-        
-    
+        </div>
         
                 
 
         
-         
+            <div id="map"></div>
             
           
 
