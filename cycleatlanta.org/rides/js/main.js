@@ -22,9 +22,6 @@ var loadedTrips = new Array();
 var visibleTrips = new Array();
 
 var riderType = "";
-var gender = ""
-var ethnicity = "";
-var age = "";
 var purpose = new Array();
 
 var r_depth = 0; //keep track of recursion depth for status updates
@@ -39,6 +36,7 @@ function tileOpacity (alpha){
 }
 
 $('#ca_data_selector').submit(function() {
+<<<<<<< HEAD
 	var temp = $('#ca_data_selector_field');
 	// var par = "";//$('#ca_data_selector_field :selected').parent().attr('label');
 	var str = '{';
@@ -67,6 +65,10 @@ $('#ca_data_selector').submit(function() {
 // 	ethnicity = "";
 // 	age = "";
 // 	purpose = new Array();
+=======
+	riderType = "";
+	purpose = new Array();
+>>>>>>> 414dbb3530c6868445a395434c5bb0e8641f0c63
 	
 // 	var demoQuery = "";
 // 	var purposeQuery = "";
@@ -81,6 +83,7 @@ $('#ca_data_selector').submit(function() {
 //     }
 // */
    
+<<<<<<< HEAD
 //     //more restricted searchers as only pulls data with something in each category
 // 	if(0 === $('input:checkbox.rider_type:checked').size() ||
 // 	   0 === $('input:checkbox.gender:checked').size() ||
@@ -118,6 +121,24 @@ $('#ca_data_selector').submit(function() {
 // 			age += $(this).val();
 // 		}
 // 	});
+=======
+    //more restricted searchers as only pulls data with something in each category
+
+	if(0 === $('input:checkbox.rider_type:checked').size() ||
+	   0 === $('input:checkbox.trip_purpose:checked').size()){
+		alert('You must select both items from each category.');
+		return false;
+    }
+	// Changed alert message from 'at least' to to 'both' as we now have only two categories
+
+	$('input:checkbox.rider_type').each(function () {
+		if(this.checked){
+			if(riderType!="") riderType+=", ";
+			riderType += $(this).val();
+		}
+	});
+	
+>>>>>>> 414dbb3530c6868445a395434c5bb0e8641f0c63
 	
 // 	$('input:checkbox.trip_purpose').each(function () {
 // 		if(this.checked){
@@ -125,6 +146,7 @@ $('#ca_data_selector').submit(function() {
 // 		}
 // 	});
 	
+<<<<<<< HEAD
 // 	//generate the demoQuery string
 // 	if(riderType!="") demoQuery = "WHERE rider_type IN ("+riderType+") ";
 // 	if(gender!=""){
@@ -144,6 +166,16 @@ $('#ca_data_selector').submit(function() {
 // 		if(purposeQuery != "")	purposeQuery += ", ";
 // 		purposeQuery += "'" + purpose[i] + "'";
 // 	}
+=======
+	//generate the demoQuery string
+	if(riderType!="") demoQuery = "WHERE rider_type IN ("+riderType+") ";
+	
+	//generate the purposeQuery
+	for(i=0; i < purpose.length; i++){
+		if(purposeQuery != "")	purposeQuery += ", ";
+		purposeQuery += "'" + purpose[i] + "'";
+	}
+>>>>>>> 414dbb3530c6868445a395434c5bb0e8641f0c63
 	
 // 	$('input[type="submit"]').attr('disabled','disabled');
 	
@@ -308,13 +340,7 @@ function updatePolylines(lineOpacity){
 
 //returns the color to use based on current color-coding selection
 function setPolylineColor (currentTrip){
-	if(showColors=="gender"){
-		return colorArray[currentTrip.trip.gender];
-	}else if (showColors=="ethnicity"){
-		return colorArray[currentTrip.trip.ethnicity];
-	}else if (showColors=="age"){
-		return colorArray[currentTrip.trip.age-1]; //offset w/ array bcs we ignore <18 yrs old
-	}else if (showColors=="rider_type"){
+	if(showColors=="rider_type"){
 		return colorArray[currentTrip.trip.rider_type];
 	}else if(showColors=="purpose"){
 		if(currentTrip.trip.purpose=="Commute") return colorArray[1];
