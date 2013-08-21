@@ -13,15 +13,21 @@ var stamenAttribution = 'Map tiles by <a href="http://stamen.com">Stamen Design<
 var mapTileLayer = new L.TileLayer(stamenUrl, {maxZoom: 18, attribution: stamenAttribution});
 map.addLayer(mapTileLayer);
 var tripsLayer = new L.LayerGroup().addTo(map);
+
 $(".leaflet-control-zoom").css("background-color","rgba(0,0,0,0.7)"); //changed zoom control to black
 $(".leaflet-control-zoom").css("position","fixed"); //changed position to fixed
-$(".leaflet-control-zoom").css("float","right"); //changed postition to right
+$(".leaflet-control-zoom").css("margin","15% 96%"); //changed postition to right
+
+
 var tilesVisible = true;
 
 var loadedTrips = new Array();
 var visibleTrips = new Array();
 
 var riderType = "";
+var gender = ""
+var ethnicity = "";
+var age = "";
 var purpose = new Array();
 
 var r_depth = 0; //keep track of recursion depth for status updates
@@ -36,101 +42,35 @@ function tileOpacity (alpha){
 }
 
 $('#ca_data_selector').submit(function() {
-<<<<<<< HEAD
-	var temp = $('#ca_data_selector_field');
-	// var par = "";//$('#ca_data_selector_field :selected').parent().attr('label');
-	var str = '{';
-	console.log(temp);
-	exit();
-	// alert(par);
-	temp.each();
-
-	for (var i=0; i<temp.length;i++) {
-		temp[i].parent().attr('label');
-		exit();
-		str += '"'+temp[i]+'":"'+temp[i]+'"';
-		if (i!=(temp.length-1)) {
-			str += ',';
-		}
-	}
-	str += '}';
-
-	getFilteredTrips(str);
-	// alert(str);
-	return false;
-	exit();
-
-// 	riderType = "";
-// 	gender = ""
-// 	ethnicity = "";
-// 	age = "";
-// 	purpose = new Array();
-=======
 	riderType = "";
+	gender = ""
+	ethnicity = "";
+	age = "";
 	purpose = new Array();
->>>>>>> 414dbb3530c6868445a395434c5bb0e8641f0c63
 	
-// 	var demoQuery = "";
-// 	var purposeQuery = "";
-// 	r_depth = 0;
+	var demoQuery = "";
+	var purposeQuery = "";
+	r_depth = 0;
 	
-// 	//more generous searches, will pull lots more data.	
-// /*
-// 	if(0 === $('input:checkbox:checked').size()){
-// 		alert('You must select at least one attribute to begin loading data.');
-// 		return false;
-// 	    // Error condition
-//     }
-// */
+	//more generous searches, will pull lots more data.	
+/*
+	if(0 === $('input:checkbox:checked').size()){
+		alert('You must select at least one attribute to begin loading data.');
+		return false;
+	    // Error condition
+    }
+*/
    
-<<<<<<< HEAD
-//     //more restricted searchers as only pulls data with something in each category
-// 	if(0 === $('input:checkbox.rider_type:checked').size() ||
-// 	   0 === $('input:checkbox.gender:checked').size() ||
-// 	   0 === $('input:checkbox.ethnicity:checked').size() ||
-// 	   0 === $('input:checkbox.age:checked').size() ||
-// 	   0 === $('input:checkbox.trip_purpose:checked').size()){
-// 		alert('You must select at least one item from each category.');
-// 		return false;
-//     }
-	
-// 	$('input:checkbox.rider_type').each(function () {
-// 		if(this.checked){
-// 			if(riderType!="") riderType+=", ";
-// 			riderType += $(this).val();
-// 		}
-// 	});
-	
-// 	$('input:checkbox.gender').each(function () {
-// 		if(this.checked){
-// 			if(gender!="") gender+=", ";
-// 			gender += $(this).val();
-// 		}
-// 	});
-	
-// 	$('input:checkbox.ethnicity').each(function () {
-// 		if(this.checked){
-// 			if(ethnicity!="") ethnicity+=", ";
-// 			ethnicity += $(this).val();
-// 		}
-// 	});
-	
-// 	$('input:checkbox.age').each(function () {
-// 		if(this.checked){
-// 			if(age!="") age+=", ";
-// 			age += $(this).val();
-// 		}
-// 	});
-=======
     //more restricted searchers as only pulls data with something in each category
-
 	if(0 === $('input:checkbox.rider_type:checked').size() ||
+	   0 === $('input:checkbox.gender:checked').size() ||
+	   0 === $('input:checkbox.ethnicity:checked').size() ||
+	   0 === $('input:checkbox.age:checked').size() ||
 	   0 === $('input:checkbox.trip_purpose:checked').size()){
-		alert('You must select both items from each category.');
+		alert('You must select at least one item from each category.');
 		return false;
     }
-	// Changed alert message from 'at least' to to 'both' as we now have only two categories
-
+	
 	$('input:checkbox.rider_type').each(function () {
 		if(this.checked){
 			if(riderType!="") riderType+=", ";
@@ -138,72 +78,79 @@ $('#ca_data_selector').submit(function() {
 		}
 	});
 	
->>>>>>> 414dbb3530c6868445a395434c5bb0e8641f0c63
+	$('input:checkbox.gender').each(function () {
+		if(this.checked){
+			if(gender!="") gender+=", ";
+			gender += $(this).val();
+		}
+	});
 	
-// 	$('input:checkbox.trip_purpose').each(function () {
-// 		if(this.checked){
-// 			purpose.push($(this).val());
-// 		}
-// 	});
+	$('input:checkbox.ethnicity').each(function () {
+		if(this.checked){
+			if(ethnicity!="") ethnicity+=", ";
+			ethnicity += $(this).val();
+		}
+	});
 	
-<<<<<<< HEAD
-// 	//generate the demoQuery string
-// 	if(riderType!="") demoQuery = "WHERE rider_type IN ("+riderType+") ";
-// 	if(gender!=""){
-// 		if(demoQuery != "") demoQuery += "AND gender IN ("+gender+") ";
-// 		else demoQuery += "WHERE gender IN ("+gender+") ";
-// 	}
-// 	if(ethnicity!=""){
-// 		if(demoQuery != "") demoQuery += "AND ethnicity IN ("+ethnicity+") ";
-// 		else demoQuery += "WHERE ethnicity IN ("+ethnicity+") ";
-// 	}
-// 	if(age!=""){ 
-// 		if(demoQuery != "")demoQuery += "AND age IN ("+age+") ";
-// 		else demoQuery += "WHERE age IN ("+age+") ";
-// 	}
-// 	//generate the purposeQuery
-// 	for(i=0; i < purpose.length; i++){
-// 		if(purposeQuery != "")	purposeQuery += ", ";
-// 		purposeQuery += "'" + purpose[i] + "'";
-// 	}
-=======
+	$('input:checkbox.age').each(function () {
+		if(this.checked){
+			if(age!="") age+=", ";
+			age += $(this).val();
+		}
+	});
+	
+	$('input:checkbox.trip_purpose').each(function () {
+		if(this.checked){
+			purpose.push($(this).val());
+		}
+	});
+	
 	//generate the demoQuery string
 	if(riderType!="") demoQuery = "WHERE rider_type IN ("+riderType+") ";
-	
+	if(gender!=""){
+		if(demoQuery != "") demoQuery += "AND gender IN ("+gender+") ";
+		else demoQuery += "WHERE gender IN ("+gender+") ";
+	}
+	if(ethnicity!=""){
+		if(demoQuery != "") demoQuery += "AND ethnicity IN ("+ethnicity+") ";
+		else demoQuery += "WHERE ethnicity IN ("+ethnicity+") ";
+	}
+	if(age!=""){ 
+		if(demoQuery != "")demoQuery += "AND age IN ("+age+") ";
+		else demoQuery += "WHERE age IN ("+age+") ";
+	}
 	//generate the purposeQuery
 	for(i=0; i < purpose.length; i++){
 		if(purposeQuery != "")	purposeQuery += ", ";
 		purposeQuery += "'" + purpose[i] + "'";
 	}
->>>>>>> 414dbb3530c6868445a395434c5bb0e8641f0c63
 	
-// 	$('input[type="submit"]').attr('disabled','disabled');
+	$('input[type="submit"]').attr('disabled','disabled');
 	
-// 	//tripsToDraw = new Array ();
-// 	updatePolylines(0);
-// 	visibleTrips = new Array(); //must happen after updating polylines 
-// 	$('#statusMsg').text("Updating map...");
-// 	$('#status').css("visibility", "visible");
-// 	$('.trip_count').text("");	
-// 	getFilteredTrips(demoQuery, purposeQuery);
+	//tripsToDraw = new Array ();
+	updatePolylines(0);
+	visibleTrips = new Array(); //must happen after updating polylines 
+	$('#statusMsg').text("Updating map...");
+	$('#status').css("visibility", "visible");
+	$('.trip_count').text("");	
+	getFilteredTrips(demoQuery, purposeQuery);
 	//prevent normal POST from occuring
-	// return false;
+	return false;
 });
 
-function getFilteredTrips(data) {
-	// alert("from getFilteredTrips"+data);
-	// exit();
+function getFilteredTrips(selectedDemo, selectedPurpose) {
 //	var self = Trips;
 	$.ajax({
 		url: 'getData.php',
 		type: 'POST',
 		data: {
 			t:'get_filtered_users',
-			data:data
+			demo:selectedDemo,
+			purpose:selectedPurpose,
 			}, 
 		dataType: 'json',
 		success: function(results) {	
-			console.log("Total trips to display: " + results.length);//HERE... simplify				
+			console.log("Total trips to display: " + results.length);//HERE... simlify				
 			var tripsToFetch = new Array();		
 			var tripsToDraw = new Array();
 			//populate the loaded trips array, indexed on trip_id			
@@ -340,7 +287,13 @@ function updatePolylines(lineOpacity){
 
 //returns the color to use based on current color-coding selection
 function setPolylineColor (currentTrip){
-	if(showColors=="rider_type"){
+	if(showColors=="gender"){
+		return colorArray[currentTrip.trip.gender];
+	}else if (showColors=="ethnicity"){
+		return colorArray[currentTrip.trip.ethnicity];
+	}else if (showColors=="age"){
+		return colorArray[currentTrip.trip.age-1]; //offset w/ array bcs we ignore <18 yrs old
+	}else if (showColors=="rider_type"){
 		return colorArray[currentTrip.trip.rider_type];
 	}else if(showColors=="purpose"){
 		if(currentTrip.trip.purpose=="Commute") return colorArray[1];
