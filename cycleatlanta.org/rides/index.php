@@ -39,32 +39,33 @@
           <div style="padding: 3px;">
             <select id="ca_data_selector_field" class="chosen" multiple="true">
               <optgroup label="Ride Purpose:">
-              <option value="PCommute">Commute</option>
-              <option value="PSchool">School</option>
-              <option value="PWork Related">Work Related</option>
-              <option value="PExercise">Exercise</option>
-              <option value="PSocial">Social</option>
-              <option value="PShopping">Shopping</option>
-              <option value="PErrand">Errand</option>
-              <option value="POther">Other</option>
+              <option value="Commute">Commute</option>
+              <option value="School">School</option>
+              <option value="Work-Related">Work Related</option>
+              <option value="Exercise">Exercise</option>
+              <option value="Social">Social</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Errand">Errand</option>
+              <option value="Other">Other</option>
               </optgroup>
               <optgroup label="Rider Type:">
-              <option value="TStrong & Fearless">Strong & Fearless</option>
-              <option value="TEnthused & Confident">Enthused & Confident</option>
-              <option value="TComfortable but Cautious">Comfortable but Cautious</option>
-              <option value="TNo Way, No How">No Way, No How</option>
+              <option value="Strong & fearless">Strong & Fearless</option>
+              <option value="Enthused & confident">Enthused & Confident</option>
+              <option value="Comfortable, but cautious">Comfortable but Cautious</option>
+              <option value="Interested, but concerned">No Way, No How</option>
               </optgroup>
             </select>
           </div>
-        </form>
-      </div>
-      <div style="padding: 3px;">
+          <div style="padding: 3px;">
         <ul style="list-style-type: none;">
           <li>
             <input type="submit" value="Update" />
           </li>
         </ul>
       </div>
+        </form>
+      </div>
+      
     </div>
   </div>
 </div>
