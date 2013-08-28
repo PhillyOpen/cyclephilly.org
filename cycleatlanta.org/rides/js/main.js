@@ -42,15 +42,41 @@ function tileOpacity (alpha){
 }
 
 $('#ca_data_selector').submit(function() {
-	riderType = "";
-	gender = ""
-	ethnicity = "";
-	age = "";
-	purpose = new Array();
+
+	var temp = $('#ca_data_selector_field');
+	// var par = "";//$('#ca_data_selector_field :selected').parent().attr('label');
+	var str = '{';
+	alert(temp);
+	exit();
+	// alert(par);
+	temp.each();
+
+	for (var i=0; i<temp.length;i++) {
+		temp[i].parent().attr('label');
+		exit();
+		str += '"'+temp[i]+'":"'+temp[i]+'"';
+		if (i!=(temp.length-1)) {
+			str += ',';
+		}
+	}
+	str += '}';
+
+	getFilteredTrips(str);
+	// alert(str);
+	return false;
+	exit();
+
+
+
+//	riderType = "";
+//	gender = ""
+//	ethnicity = "";
+//	age = "";
+//	purpose = new Array();
 	
-	var demoQuery = "";
-	var purposeQuery = "";
-	r_depth = 0;
+//	var demoQuery = "";
+//	var purposeQuery = "";
+//	r_depth = 0;
 	
 	//more generous searches, will pull lots more data.	
 /*
@@ -62,48 +88,48 @@ $('#ca_data_selector').submit(function() {
 */
    
     //more restricted searchers as only pulls data with something in each category
-	if(0 === $('input:checkbox.rider_type:checked').size() ||
-	   0 === $('input:checkbox.gender:checked').size() ||
-	   0 === $('input:checkbox.ethnicity:checked').size() ||
-	   0 === $('input:checkbox.age:checked').size() ||
-	   0 === $('input:checkbox.trip_purpose:checked').size()){
-		alert('You must select at least one item from each category.');
-		return false;
-    }
+//	if(0 === $('input:checkbox.rider_type:checked').size() ||
+//	   0 === $('input:checkbox.gender:checked').size() ||
+//	   0 === $('input:checkbox.ethnicity:checked').size() ||
+//	   0 === $('input:checkbox.age:checked').size() ||
+//	   0 === $('input:checkbox.trip_purpose:checked').size()){
+//		alert('You must select at least one item from each category.');
+//		return false;
+ //   }
 	
-	$('input:checkbox.rider_type').each(function () {
-		if(this.checked){
-			if(riderType!="") riderType+=", ";
-			riderType += $(this).val();
-		}
-	});
+//	$('input:checkbox.rider_type').each(function () {
+//		if(this.checked){
+//			if(riderType!="") riderType+=", ";
+//			riderType += $(this).val();
+//		}
+//	});
 	
-	$('input:checkbox.gender').each(function () {
-		if(this.checked){
-			if(gender!="") gender+=", ";
-			gender += $(this).val();
-		}
-	});
+//	$('input:checkbox.gender').each(function () {
+//		if(this.checked){
+//			if(gender!="") gender+=", ";
+//			gender += $(this).val();
+//		}
+//	});
 	
-	$('input:checkbox.ethnicity').each(function () {
-		if(this.checked){
-			if(ethnicity!="") ethnicity+=", ";
-			ethnicity += $(this).val();
-		}
-	});
+//	$('input:checkbox.ethnicity').each(function () {
+//		if(this.checked){
+//			if(ethnicity!="") ethnicity+=", ";
+//			ethnicity += $(this).val();
+//		}
+//	});
 	
-	$('input:checkbox.age').each(function () {
-		if(this.checked){
-			if(age!="") age+=", ";
-			age += $(this).val();
-		}
-	});
+//	$('input:checkbox.age').each(function () {
+//		if(this.checked){
+//			if(age!="") age+=", ";
+//			age += $(this).val();
+//		}
+//	});
 	
-	$('input:checkbox.trip_purpose').each(function () {
-		if(this.checked){
-			purpose.push($(this).val());
-		}
-	});
+//	$('input:checkbox.trip_purpose').each(function () {
+//		if(this.checked){
+//			purpose.push($(this).val());
+//		}
+//	});
 	
 	//generate the demoQuery string
 	if(riderType!="") demoQuery = "WHERE rider_type IN ("+riderType+") ";
