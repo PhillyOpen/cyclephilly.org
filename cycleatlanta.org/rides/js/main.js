@@ -43,13 +43,34 @@ function tileOpacity (alpha){
 
 $('#ca_data_selector').submit(function() {
 
-	var temp = $('#ca_data_selector_field');
+	var temp = $('#ca_data_selector_field').val();
+	riderType = "";
+	purpose = new Array();
+	r_depth = 0;
+
+	gender = ""
+	ethnicity = "";
+	age = "";
+
+	var purposeQuery = "";
+	var demoQuery = "";
+
+	$.each(temp, function(key,value){
+		//Values in field; For each value, get parent category
+		var group = $('#ca_data_selector select').children().children('option[value="'+value+'"]').parent().attr('label');
+		if(group == 'Rider Type:') {
+			if(riderType!="") riderType+=", ";
+			riderType += value;
+			
+		}else if(group == 'Ride Purpose:'){
+			purpose.push(value);
+			console.log(value)		
+		}
+//			
+	});
 	// var par = "";//$('#ca_data_selector_field :selected').parent().attr('label');
-	var str = '{';
-	alert(temp);
-	exit();
-	// alert(par);
-	temp.each();
+
+	/*temp.each();
 
 	for (var i=0; i<temp.length;i++) {
 		temp[i].parent().attr('label');
@@ -61,22 +82,15 @@ $('#ca_data_selector').submit(function() {
 	}
 	str += '}';
 
-	getFilteredTrips(str);
-	// alert(str);
-	return false;
-	exit();
+	getFilteredTrips(str);*/
+	// console.log(str);
+//	
 
-
-
-//	riderType = "";
-//	gender = ""
-//	ethnicity = "";
-//	age = "";
-//	purpose = new Array();
+//	
 	
-//	var demoQuery = "";
-//	var purposeQuery = "";
-//	r_depth = 0;
+//	
+//	
+//	
 	
 	//more generous searches, will pull lots more data.	
 /*
@@ -166,6 +180,8 @@ $('#ca_data_selector').submit(function() {
 
 function getFilteredTrips(selectedDemo, selectedPurpose) {
 //	var self = Trips;
+console.log(selectedDemo)
+console.log(selectedPurpose)
 	$.ajax({
 		url: 'getData.php',
 		type: 'POST',

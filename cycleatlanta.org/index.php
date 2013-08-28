@@ -1,1 +1,2 @@
-post/index.php
+<?php
+header('Location: rides');
