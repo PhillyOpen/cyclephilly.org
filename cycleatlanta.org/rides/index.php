@@ -55,14 +55,12 @@
               <option value="Interested, but concerned">No Way, No How</option>
               </optgroup>
             </select>
+           <input type="submit" value="Update" />
+        
           </div>
-          <div style="padding: 3px;">
-        <ul style="list-style-type: none;">
-          <li>
-            <input type="submit" value="Update" />
-          </li>
-        </ul>
-      </div>
+        
+           
+        
         </form>
       </div>
       
@@ -86,7 +84,6 @@
 		jQuery(document).ready(function(){
 	jQuery(".chosen").chosen();
 });
-		
 		
 
 		</script>
