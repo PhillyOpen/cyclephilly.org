@@ -20,7 +20,7 @@
 <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
 <div class="section group">
   <div class="col span_5_of_5">
     <div class="cyclePHL_title">
@@ -50,8 +50,8 @@
               <option value="Other">Other</option>
               </optgroup>
               <optgroup label="Rider Type:">
-              <option value="Strong & fearless">Strong & Fearless</option>
-              <option value="Enthused & confident">Enthused & Confident</option>
+              <option value="Strong & fearless">Strong &amp; Fearless</option>
+              <option value="Enthused & confident">Enthused &amp; Confident</option>
               <option value="Comfortable, but cautious">Comfortable but Cautious</option>
               <option value="Interested, but concerned">No Way, No How</option>
               </optgroup>
