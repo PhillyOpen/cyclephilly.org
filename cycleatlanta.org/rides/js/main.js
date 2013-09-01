@@ -14,9 +14,38 @@ var mapTileLayer = new L.TileLayer(stamenUrl, {maxZoom: 18, attribution: stamenA
 map.addLayer(mapTileLayer);
 var tripsLayer = new L.LayerGroup().addTo(map);
 
-$(".leaflet-control-zoom").css("background-color","rgba(0,0,0,0.7)"); //changed zoom control to black
-$(".leaflet-control-zoom").css("position","fixed"); //changed position to fixed
-$(".leaflet-control-zoom").css("margin","15% 96%"); //changed postition to right
+$(".leaflet-control-zoom").css("background-color","rgba(0, 0, 0, 0.25)"); //changed zoom control to black
+//$(".leaflet-control-zoom").css("position","relative"); //changed position to relative
+//$(".leaflet-control-zoom").css("margin","15%"); //changed postition to top-left
+
+var upControl = L.Control.extend({
+            options: {
+                position: 'topright'
+            },
+
+
+
+            onAdd: function(map) {
+                
+                 var className = 'leaflet-control-up';
+                var container = L.DomUtil.create('div', 'leaflet-control-up');
+
+                var link = L.DomUtil.create('a', className + '-link', container);
+                link.href = '#';
+                link.title = 'Go back up';
+
+                
+                L.DomEvent.on(link, 'click', function(evt) {
+                    L.DomEvent.stopPropagation(evt);
+                    $('html,body').animate({
+                        scrollTop: $('#cycleTitleText').offset().top
+                    }, 250);       
+                })                
+                return container;  
+            }
+        });     
+
+map.addControl(new upControl());
 
 
 var tilesVisible = true;

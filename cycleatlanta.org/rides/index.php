@@ -29,6 +29,7 @@
   </div>
 </div>
 <div class="section group">
+
   <div class="col span_5_of_5 chosenBox">
     <div class="section group">
       <div class="col span_1_of_5">
@@ -37,7 +38,7 @@
       <div class="col span_2_of_5">
         <form id="ca_data_selector" action="#">
           <div style="padding: 3px;">
-            <select id="ca_data_selector_field" class="chosen" multiple="true">
+            <select id="ca_data_selector_field" class="chosen" multiple="true" style="width:150px;">
               <optgroup label="Ride Purpose:">
               <option value="Commute">Commute</option>
               <option value="School">School</option>
@@ -55,7 +56,7 @@
               <option value="Interested, but concerned">No Way, No How</option>
               </optgroup>
             </select>
-           <input type="submit" value="Update" />
+           <input type="submit" value="Update" style="position: relative;"/>
         
           </div>
         
@@ -67,7 +68,6 @@
     </div>
   </div>
 </div>
-
 <!-- <div class="section group"> -->
 <!--  <div class="col span_5_of_5">-->
 <div id="map"></div>
@@ -85,6 +85,7 @@
 	jQuery(".chosen").chosen();
 });
 		
+
 
 		</script>
 </body>
