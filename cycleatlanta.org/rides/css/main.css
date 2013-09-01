@@ -123,9 +123,8 @@ padding: 5px;
 z-index: 25;
 background-color: rgb(0,0,0);
 width: 100%;
-
-
 padding: 3px;
+
 }
 
 #filterText {
@@ -134,6 +133,7 @@ font-size:1.5em;
 color:#ffffff;
 padding: 5px;
 margin-left:10px;
+
 }
 
 /* leaflet control up */
@@ -171,4 +171,46 @@ margin-left:10px;
 .leaflet-control-up a:first-child {
   margin-top: 0;
 }
+
+
+
+/* leaflet control down */
+
+.leaflet-control-down-link {
+  background-image: url(arrow_down.png);
+}
+
+.leaflet-control-down {
+   background-color: rgba(0, 0, 0, 0.25); 
+
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+
+.leaflet-control-down a {
+  /* background-color: rgba(255, 255, 255, 0.75); */
+   background-color: #ffffff;
+
+  
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  display: block;
+  margin-top: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.leaflet-control-down a:first-child {
+  margin-top: 0;
+}
+
+
+
+
 

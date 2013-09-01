@@ -32,7 +32,7 @@ var upControl = L.Control.extend({
 
                 var link = L.DomUtil.create('a', className + '-link', container);
                 link.href = '#';
-                link.title = 'Go back up';
+                link.title = 'Scroll to Top';
 
                 
                 L.DomEvent.on(link, 'click', function(evt) {
@@ -45,7 +45,35 @@ var upControl = L.Control.extend({
             }
         });     
 
+var downControl = L.Control.extend({
+            options: {
+                position: 'topright'
+            },
+
+
+
+            onAdd: function(map) {
+                
+                 var className = 'leaflet-control-down';
+                var container = L.DomUtil.create('div', 'leaflet-control-down');
+
+                var link = L.DomUtil.create('a', className + '-link', container);
+                link.href = '#';
+                link.title = 'Scroll to Map';
+
+                
+                L.DomEvent.on(link, 'click', function(evt) {
+                    L.DomEvent.stopPropagation(evt);
+                    $('html,body').animate({
+                        scrollTop: $('#map').offset().top
+                    }, 250);       
+                })                
+                return container;  
+            }
+        });   
+
 map.addControl(new upControl());
+map.addControl(new downControl());
 
 
 var tilesVisible = true;
