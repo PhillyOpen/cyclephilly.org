@@ -21,16 +21,16 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-<div class="section group">
+<div class="section group cyclePHL_title">
   <div class="col span_5_of_5">
-    <div class="cyclePHL_title">
-      <div id="cycleTitleText">Cycle Philly</div>
-    </div>
+    
+      <div id="cycleTitleText">Cycle Philly  <span class="smallTitle"><em>Record. Ride. Reimagine your Routes.</em></span></div>
+    
   </div>
 </div>
-<div class="section group">
+<div class="section group chosenBox">
 
-  <div class="col span_5_of_5 chosenBox">
+  <div class="col span_5_of_5">
     <div class="section group">
       <div class="col span_1_of_5">
         <div id="filterText">Filter Rides:</div>
