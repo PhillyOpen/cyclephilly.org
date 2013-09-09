@@ -20,7 +20,7 @@ $(".leaflet-control-zoom").css("background-color","rgba(0, 0, 0, 0.25)"); //chan
 
 var upControl = L.Control.extend({
             options: {
-                position: 'topright'
+                position: 'bottomright'
             },
 
 
