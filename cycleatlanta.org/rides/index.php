@@ -59,12 +59,14 @@
            <input type="submit" value="Update" style="position: relative;"/>
         
           </div>
-        
+          
            
         
         </form>
+
       </div>
-      
+      <div class="col span_1_of_5">Instructions Text</div>
+          
     </div>
   </div>
 </div>
