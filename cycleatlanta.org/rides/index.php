@@ -25,7 +25,7 @@
 <div class="section group cyclePHL_title">
   <div class="col span_5_of_5">
     
-      <div id="cycleTitleText"><a href="#">Cycle Philly</a>  <span class="smallTitle"><em>Record. Ride. Reimagine your Routes.</em></span></div>
+      <div id="cycleTitleText"><a href="#">Cycle Philly</a>  <span class="smallTitle"><em>Ride. Record. Reimagine your Routes.</em></span></div>
     
   </div>
 </div>
@@ -66,7 +66,7 @@
         </form>
 
       </div>
-      <div class="col span_1_of_5">Instructions Text</div>
+      <div class="col span_1_of_5"></div>
           
     </div>
   </div>
