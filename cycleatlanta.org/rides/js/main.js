@@ -75,6 +75,13 @@ var downControl = L.Control.extend({
 map.addControl(new upControl());
 map.addControl(new downControl());
 
+map.locate({setView: true, maxZoom: 14});
+
+function onLocationError(e) {
+    alert(e.message);
+}
+
+map.on('locationerror', onLocationError);
 
 var tilesVisible = true;
 
