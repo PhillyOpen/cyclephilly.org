@@ -50,12 +50,12 @@
               <option value="Errand">Errand</option>
               <option value="Other">Other</option>
               </optgroup>
-              <optgroup label="Rider Type:">
+             <!-- <optgroup label="Rider Type:">
               <option value="Strong & fearless">Strong &amp; Fearless</option>
               <option value="Enthused & confident">Enthused &amp; Confident</option>
               <option value="Comfortable, but cautious">Comfortable but Cautious</option>
               <option value="Interested, but concerned">No Way, No How</option>
-              </optgroup>
+              </optgroup> -->
             </select>
            <input type="submit" value="Update" style="position: relative;"/>
         
