@@ -3,14 +3,12 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  font-size: 1em; 
+  font-size: 1em;
   zoom: 1;
   *display: inline;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
- /* margin-left: 1%;
-  float:left; */
 }
 .chosen-container .chosen-drop {
   position: absolute;
@@ -65,7 +63,6 @@
   margin-right: 26px;
   text-overflow: ellipsis;
   white-space: nowrap;
-
 }
 .chosen-container-single .chosen-single-with-deselect span {
   margin-right: 38px;
