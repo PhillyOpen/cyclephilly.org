@@ -132,6 +132,9 @@ $('#ca_data_selector').submit(function() {
 		}
 //			
 	});
+
+// START OLD JS TO LEAVE COMMENTED OUT
+
 	// var par = "";//$('#ca_data_selector_field :selected').parent().attr('label');
 
 	/*temp.each();
@@ -209,7 +212,11 @@ $('#ca_data_selector').submit(function() {
 //		}
 //	});
 	
-	//generate the demoQuery string
+// END OLD JS TO LEAVE COMMENTED OUT
+
+
+
+
 	if(riderType!="") demoQuery = "WHERE rider_type IN ("+riderType+") ";
 	if(gender!=""){
 		if(demoQuery != "") demoQuery += "AND gender IN ("+gender+") ";
@@ -456,6 +463,9 @@ function changeColor(tripCategory){
  * array/hash/object that is given.
  * Docs: http://www.openjs.com/scripts/others/dump_function_php_print_r.php
  */
+
+
+ 
 function dump(arr,level) {
 	var dumped_text = "";
 	if(!level) level = 0;

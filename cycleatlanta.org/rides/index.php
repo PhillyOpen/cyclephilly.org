@@ -4,18 +4,18 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Cycle Philly: Interactive map</title>
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, user-scalable=no" />
+ <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Cycle Philly: Interactive map</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-<link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
-<link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap-responsive.min.css">
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="chosen/chosen.css">
+        <link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="chosen/chosen.css">
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -81,7 +81,7 @@
 <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.1"></script>
 <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
 <script src="js/main.js"></script>
-<script src="chosen/chosen.jquery.min.js" type="text/javascript"></script>
+<script src="chosen/chosen.jquery.min.js" type="text/javascript"></script>  
 <script>
 		
 		jQuery(document).ready(function(){
