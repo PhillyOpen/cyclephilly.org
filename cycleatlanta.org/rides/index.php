@@ -11,7 +11,9 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+<!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" /> -->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+
         <link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" type="text/css" media="all" />
         <link rel="stylesheet" href="css/main.css">
@@ -79,7 +81,10 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.1"></script>
-<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+<!-- <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script> --> 
+
+<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+
 <script src="js/main.js"></script>
 <script src="chosen/chosen.jquery.min.js" type="text/javascript"></script>  
 <script>
