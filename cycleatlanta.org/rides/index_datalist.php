@@ -8,8 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Cycle Philly: Interactive map</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-
+<meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap.min.css">
 <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" /> -->
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
