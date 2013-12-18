@@ -58,7 +58,7 @@
               <option value="Interested, but concerned">No Way, No How</option>
               </optgroup> -->
             </select>
-           <input type="submit" value="Update" style="position: relative;"/>
+           <input type="submit" name="Ride Purpose:" value="Update" style="position: relative;"/>
         
           </div>
           
