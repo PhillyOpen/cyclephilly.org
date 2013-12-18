@@ -26,7 +26,7 @@
     <script> 
 	
 	if ( (screen.width < 1024) && (screen.height < 768) ) { 
-window.location = 'http://mobile.site.com';
+window.location = 'index_datalist.php';
 } 
 
 </script>
