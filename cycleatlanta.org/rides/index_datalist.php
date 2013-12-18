@@ -41,8 +41,8 @@
       <div class="col span_2_of_5">
         <form id="ca_data_selector" action="#">
           <div style="padding: 3px;">
-            <select id="ca_data_selector_field" class="chosen" multiple="true" style="width:150px;">
-              <optgroup label="Ride Purpose:">
+            <select id="ca_data_selector_field" list="purposes" multiple="true" style="width:150px;">
+              <datalist id="Ride Purpose:">
               <option value="Commute">Commute</option>
               <option value="School">School</option>
               <option value="Work-Related">Work Related</option>
@@ -51,7 +51,7 @@
               <option value="Shopping">Shopping</option>
               <option value="Errand">Errand</option>
               <option value="Other">Other</option>
-              </optgroup>
+              </datalist>
              <!-- <optgroup label="Rider Type:">
               <option value="Strong & fearless">Strong &amp; Fearless</option>
               <option value="Enthused & confident">Enthused &amp; Confident</option>
