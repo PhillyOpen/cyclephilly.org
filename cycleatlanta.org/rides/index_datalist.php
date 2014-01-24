@@ -51,6 +51,7 @@
               <option value="Errand">Errand</option>
               <option value="Other">Other</option>
               </datalist>
+              
              <!-- <optgroup label="Rider Type:">
               <option value="Strong & fearless">Strong &amp; Fearless</option>
               <option value="Enthused & confident">Enthused &amp; Confident</option>
