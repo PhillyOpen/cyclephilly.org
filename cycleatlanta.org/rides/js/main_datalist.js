@@ -119,6 +119,8 @@ $('#ca_data_selector').submit(function() {
 	console.log(selectedPurpose);
 	});
 
+getFilteredTrips(selectedDemo, selectedPurpose);
+
 // START OLD JS TO LEAVE COMMENTED OUT
 
 	// var par = "";//$('#ca_data_selector_field :selected').parent().attr('label');
