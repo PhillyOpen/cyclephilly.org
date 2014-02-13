@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" type="text/css" media="all" />
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="chosen/chosen.css">
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -39,7 +40,7 @@
       <div class="col span_2_of_5">
         <form id="ca_data_selector" action="#">
           <div style="padding: 3px;">
-            <select id="ca_data_selector_field" list="purposes" multiple="true" style="width:150px;">
+            <div id="ca_data_selector_field" list="purposes" multiple="true" style="width:150px;">
               <datalist id="Ride Purpose:">
               <option value="Commute">Commute</option>
               <option value="School">School</option>
@@ -57,7 +58,7 @@
               <option value="Comfortable, but cautious">Comfortable but Cautious</option>
               <option value="Interested, but concerned">No Way, No How</option>
               </optgroup> -->
-            </select>
+            </div>
            <input type="submit" name="Ride Purpose:" value="Update" style="position: relative;"/>
         
           </div>
@@ -84,8 +85,16 @@
 
 <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
 
-<script src="js/main_datalist.js"></script>
+<script src="js/main.js"></script>
+<script src="chosen/chosen.jquery.min.js" type="text/javascript"></script>  
+<script>
+		
+		jQuery(document).ready(function(){
+	jQuery(".chosen").chosen();
+});
+		
 
 
+		</script>
 </body>
 </html>

@@ -4,6 +4,14 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
+   <script> 
+  
+  if ( (screen.width < 1024) && (screen.height < 768) ) { 
+window.location = 'index_datalist.php';
+} 
+
+</script>
+
  <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Cycle Philly: Interactive map</title>
@@ -20,6 +28,9 @@
         <link rel="stylesheet" href="chosen/chosen.css">
 </head>
 <body>
+
+ 
+
 <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
