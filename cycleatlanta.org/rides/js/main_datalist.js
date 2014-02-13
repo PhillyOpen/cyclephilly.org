@@ -114,7 +114,7 @@ $('#ca_data_selector').submit(function() {
 	temp.toString(); // Convert datalist array to string
 	temp = "'"+temp+"'"; // Add ' to the beginning and end of string
 	var selectedPurpose; // define variable to pass to function
-    selectedPurpose = temp.replace(/,/g,"',' "); // add interior apostrophes
+    selectedPurpose = temp.replace(/,/g,"', '"); // add interior apostrophes
 	console.log(selectedDemo);
 	console.log(selectedPurpose);
 	});
