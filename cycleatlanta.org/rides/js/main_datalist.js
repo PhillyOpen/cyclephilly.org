@@ -203,37 +203,37 @@ $('#ca_data_selector').submit(function() {
 
 
 
-	if(riderType!="") demoQuery = "WHERE rider_type IN ("+riderType+") ";
-	if(gender!=""){
-		if(demoQuery != "") demoQuery += "AND gender IN ("+gender+") ";
-		else demoQuery += "WHERE gender IN ("+gender+") ";
-	}
-	if(ethnicity!=""){
-		if(demoQuery != "") demoQuery += "AND ethnicity IN ("+ethnicity+") ";
-		else demoQuery += "WHERE ethnicity IN ("+ethnicity+") ";
-	}
-	if(age!=""){ 
-		if(demoQuery != "")demoQuery += "AND age IN ("+age+") ";
-		else demoQuery += "WHERE age IN ("+age+") ";
-	}
-	//generate the purposeQuery
-	for(i=0; i < purpose.length; i++){
-		if(purposeQuery != "")	purposeQuery += ", ";
-		purposeQuery += "'" + purpose[i] + "'";
-	}
+// 	if(riderType!="") demoQuery = "WHERE rider_type IN ("+riderType+") ";
+// 	if(gender!=""){
+// 		if(demoQuery != "") demoQuery += "AND gender IN ("+gender+") ";
+// 		else demoQuery += "WHERE gender IN ("+gender+") ";
+// 	}
+// 	if(ethnicity!=""){
+// 		if(demoQuery != "") demoQuery += "AND ethnicity IN ("+ethnicity+") ";
+// 		else demoQuery += "WHERE ethnicity IN ("+ethnicity+") ";
+// 	}
+// 	if(age!=""){ 
+// 		if(demoQuery != "")demoQuery += "AND age IN ("+age+") ";
+// 		else demoQuery += "WHERE age IN ("+age+") ";
+// 	}
+// 	//generate the purposeQuery
+// 	for(i=0; i < purpose.length; i++){
+// 		if(purposeQuery != "")	purposeQuery += ", ";
+// 		purposeQuery += "'" + purpose[i] + "'";
+// 	}
 	
-	$('input[type="submit"]').attr('disabled','disabled');
+// 	$('input[type="submit"]').attr('disabled','disabled');
 	
-	//tripsToDraw = new Array ();
-	updatePolylines(0);
-	visibleTrips = new Array(); //must happen after updating polylines 
-	$('#statusMsg').text("Updating map...");
-	$('#status').css("visibility", "visible");
-	$('.trip_count').text("");	
-	getFilteredTrips(demoQuery, purposeQuery);
-	//prevent normal POST from occuring
-	return false;
-});
+// 	//tripsToDraw = new Array ();
+// 	updatePolylines(0);
+// 	visibleTrips = new Array(); //must happen after updating polylines 
+// 	$('#statusMsg').text("Updating map...");
+// 	$('#status').css("visibility", "visible");
+// 	$('.trip_count').text("");	
+// 	getFilteredTrips(demoQuery, purposeQuery);
+// 	//prevent normal POST from occuring
+// 	return false;
+// });
 
 function getFilteredTrips(selectedDemo, selectedPurpose) {
 //	var self = Trips;
