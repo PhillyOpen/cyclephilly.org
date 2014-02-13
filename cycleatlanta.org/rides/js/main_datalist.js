@@ -117,9 +117,10 @@ $('#ca_data_selector').submit(function() {
     selectedPurpose = temp.replace(/,/g,"', '"); // add interior apostrophes
 	console.log(selectedDemo);
 	console.log(selectedPurpose);
+	getFilteredTrips(selectedDemo, selectedPurpose);
+return false;
 	});
 
-getFilteredTrips(selectedDemo, selectedPurpose);
 
 // START OLD JS TO LEAVE COMMENTED OUT
 
