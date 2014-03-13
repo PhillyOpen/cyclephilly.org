@@ -38,7 +38,7 @@ var upControl = L.Control.extend({
                 L.DomEvent.on(link, 'click', function(evt) {
                     L.DomEvent.stopPropagation(evt);
                     $('html,body').animate({
-                        scrollTop: $('#cycleTitleText').offset().top
+                        scrollTop: $('#branding').offset().top
                     }, 250);       
                 })                
                 return container;  
@@ -104,6 +104,20 @@ var LOAD_CHUNK = 35; // constant for how many trips to fetch at a time.
 function tileOpacity (alpha){
 	mapTileLayer.setOpacity(alpha);
 }
+
+// $('#ca_data_selector').submit(
+//  $('html,body').animate({
+//                         scrollTop: $('#map').offset().top
+//                     }, 250);   
+// );
+
+
+$("#scroll").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#map").offset().top
+    }, 2000);
+});
+
 
 $('#ca_data_selector').submit(function() {
 

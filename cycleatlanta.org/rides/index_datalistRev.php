@@ -6,7 +6,7 @@
 <head>
  <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>CyclePhilly: Interactive map</title>
+        <title>Cycle Philly: Interactive map</title>
         <meta name="description" content="">
 <meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap.min.css">
@@ -16,65 +16,29 @@
         <link rel="stylesheet" href="http://mytracks.phillyopen.org/css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" type="text/css" media="all" />
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="chosen/chosen.css">
-
-
-
-   <!-- Main site js css -->  
-
-      <link rel="stylesheet" href="./css/style.css"/>
-
-
-    <script src="js/picturefill.js"></script>
-    <script src="js/matchmedia.js"></script>
-
-
-    
-    <!-- Normalize hide address bar for iOS and Android -->
-    <script src="./js/hideaddressbar.js"></script>
-
-
 </head>
 <body>
 <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-
-
-<body lang="en">
-
-
-  <div id="branding"><a href="http://cycle-philly.rhcloud.com/" ><div id="logo"><img class="img-responsive" src="img/logo.png"/></div><div id="cyclephilly">CyclePhilly</div><span id="ride">Ride. Record. Reimagine Your Routes.</span></a></div>
-
-
-    <div id="container-nav" class="wrapper">
-
-      <!-- <div><a href="#" ><div id="logo"><img class="img-responsive" src="img/logo.png"/></div><div id="cyclephilly">CyclePhilly</div><span id="ride">Ride. Record. Reimagine Your Routes.</span></a></div> -->
-
-    <!--Add opening <section> tag below here-->
+<div class="section group cyclePHL_title">
+  <div class="col span_5_of_5">
     
-    <section id="nav">
-
+      <div id="cycleTitleText"><a href="http://www.cyclephilly.org">Cycle Philly</a>  <span class="smallTitle"><em>Ride. Record. Reimagine your Routes.</em></span></div>
     
- <!-- Checkbox Hack markup -->
-       <!--  <input type="checkbox" id="toggle" />
-        <label for="toggle" onclick>Menu</label> -->
-        <!-- /Checkbox Hack markup -->
+  </div>
+</div>
+<div class="section group chosenBox">
 
-         <nav>
-   
-
-        </nav>
-
-
-  </section>
-
-  <section class="float-left">
-<p id="chunk1" class="pad-5">to see the tracks your fellow bikers are carving throughout the city, choose one or multiple trip purposes and then select 'Make Tracks'</p>
- <div class="clear-fix>"
-        <div class="float-right">
-        <form id="ca_data_selector" action="#" class="float-left pad-5">
+  <div class="col span_5_of_5">
+    <div class="section group">
+      <div class="col span_1_of_5">
+        <div id="filterText">Filter Rides:</div>
+      </div>
+      <div class="col span_2_of_5">
+        <form id="ca_data_selector" action="#">
+          <div style="padding: 3px;">
             <select id="ca_data_selector_field" list="purposes" multiple="true" style="width:150px;">
               <datalist id="Ride Purpose:">
               <option value="Commute">Commute</option>
@@ -94,29 +58,25 @@
               <option value="Interested, but concerned">No Way, No How</option>
               </optgroup> -->
             </select>
-           <input type="submit" value="&rsaquo; Make Tracks" class="float-left pad-5" id="scroll"/>
+           <input type="submit" value="Update" style="position: relative;"/>
         
-        
+          </div>
           
            
         
         </form>
 
       </div>
-
-
-
+      <div class="col span_1_of_5"></div>
+          
     </div>
-
-
-</section>
-        
-           
+  </div>
+</div>
+<!-- <div class="section group"> -->
+<!--  <div class="col span_5_of_5">-->
 <div id="map"></div>
-
-
-
 <!-- </div> -->
+</div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.1"></script>
@@ -124,7 +84,6 @@
 
 <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
 
-<!-- <script src="js/main.js"></script> --> 
 <script src="js/main_datalist.js"></script>
 
 
