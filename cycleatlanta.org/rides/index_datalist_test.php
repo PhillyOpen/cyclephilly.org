@@ -70,8 +70,8 @@
 
   </section>
 
-  <section class="float-left">
-<p id="chunk1" class="pad-5">to see the tracks your fellow bikers are carving throughout the city, choose one or multiple trip purposes and then select 'Make Tracks'</p>
+  <section class="float-left" id="selector">
+<p id="chunk1" class="pad-5 marg-top-5">Want to see the tracks your fellow cyclists are carving throughout the City? Just select one or multiple trip purposes and then select 'Make Tracks'</p>
  <div class="clear-fix>"
         <div class="float-right">
         <form id="ca_data_selector" action="#" class="float-left pad-5">
@@ -94,7 +94,7 @@
               <option value="Interested, but concerned">No Way, No How</option>
               </optgroup> -->
             </select>
-           <input type="submit" value="&rsaquo; Make Tracks" class="float-left pad-5" id="scroll"/>
+           <input type="submit" value="&rsaquo; Make Tracks" class="float-left pad-5 marg-top-5" id="scroll"/>
         
         
           
